@@ -19,7 +19,7 @@ namespace all_cats {
 			//some variadic declarations
 			void allthefish(...);
 
-			//variadic print from https://en.cppreference.com/w/cpp/utility/variadic
+			//variadic template function
 			template <typename First, typename ...T>
 			void anyFood(First f, T... allFood) {
 				anyFood(f);

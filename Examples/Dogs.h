@@ -16,12 +16,24 @@ namespace all_dogs {
 
 	};
 
-	class Pyrannese :public Dogs {
+
+	//a quick example of the diamond inheritance problem.  
+	class Poodle :public Dogs {
 	public:
-		Pyrannese();
-		 ~Pyrannese();
+		Poodle();
+		virtual ~Poodle();
 	protected:
 		bool chaseCat(all_cats::Cats cat);
+	};
+
+	class Labrador :public Dogs {
+		Labrador();
+		virtual ~Labrador();
+	};
+
+	class Labradoodle : public Poodle, public Labrador {
+		Labradoodle();
+		~Labradoodle();
 	};
 
 }
