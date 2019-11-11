@@ -1,8 +1,4 @@
 ﻿  Examples.cpp
 c:\users\gillian\source\repos\examples\examples\foo.h(12): warning C4099: 'test::friended': type name first seen using 'struct' now seen using 'class'
   c:\users\gillian\source\repos\examples\examples\foo.h(5): note: see declaration of 'test::friended'
-  foo.cpp
-c:\users\gillian\source\repos\examples\examples\foo.h(12): warning C4099: 'test::friended': type name first seen using 'struct' now seen using 'class'
-  c:\users\gillian\source\repos\examples\examples\foo.h(5): note: see declaration of 'test::friended'
-  Generating Code...
   Examples.vcxproj -> C:\Users\Gillian\source\repos\Examples\Debug\Examples.exe

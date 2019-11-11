@@ -9,16 +9,17 @@ namespace test {
 	//A C++ class
 	class foo
 	{
-	friend class friended;//Proves 2 things: 
-						  //	1	C++ treats classes and structs the same way even if the compiler complains about it
-						  //	2	Friend classes exist.  Friends can access private members.
+	friend struct friended;//Proves 2 things: 
+						  //	1	Structs are pretty dang similar to classes
+						  //	2	Friend classes exist.  Friends can access private and protected
+						  //		members of a Class without being children of that class
 
 	public: //Everyone can see me!
 		foo();
 		int theTruth = 42;
 		virtual ~foo();
 
-	protected: //only my children can see this!
+	protected: //only my children and friends can see this!
 		virtual void print(); //A virtual class.  Means the child can take this one over.
 
 	private: //Only I can see this.  And my friends.  
@@ -26,7 +27,7 @@ namespace test {
 
 	};
 
-	class bar : foo //bar is a child of foo
+	class bar : protected foo //bar is a child of foo
 	{
 	public:
 		bar();
